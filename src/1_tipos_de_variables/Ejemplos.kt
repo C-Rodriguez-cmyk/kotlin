@@ -21,7 +21,7 @@ fun main() {
     // añgunas lineas mas de codigo
     mes = 2
     // variable de tipo char, almacena un unico caracter
-    var continua: Char = "s"
+    var continua: Char = 's'
     //Variable de tipo Boolean, True o false
     var fin: Boolean = false
 
