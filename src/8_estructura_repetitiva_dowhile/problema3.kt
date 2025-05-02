@@ -15,7 +15,7 @@ Usa solo estructuras básicas (variables, condicionales, bucles, readln()).
 fun main() {
     var opcion = 0
     do {
-        println("=== Calculadora Básica ===")
+        println("Calculadora Básica")
         println("1. Sumar dos números")
         println("2. Restar dos números")
         println("3. Multiplicar dos números")
@@ -46,8 +46,8 @@ fun main() {
                 }
             }
         } else if (opcion != 5) {
-            println("Opción no válida. Intente de nuevo.")
+            println("Opción no válida")
         }
     } while (opcion != 5)
-    println("¡Gracias por usar la calculadora!")
+    println("Gracias por usar la calculadora")
 }
