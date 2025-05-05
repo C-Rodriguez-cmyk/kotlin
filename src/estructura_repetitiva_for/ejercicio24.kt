@@ -15,4 +15,7 @@ fun main() {
         if (i % 9 == 0)
             mult9++
     }
+    println("cantidad de multiplos de 3: $mult3")
+    println("cantidad de multiplos de 5: $mult5")
+    println("cantidad de multiplos de 9: $mult9")
 }
