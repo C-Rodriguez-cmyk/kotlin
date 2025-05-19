@@ -1,4 +1,4 @@
-package concepto_de_funciones
+package `12_concepto_de_funciones`
 
 /*
 Desarrollar una función que solicite la carga de tres valores y muestre el menor.

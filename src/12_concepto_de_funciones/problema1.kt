@@ -1,4 +1,4 @@
-package concepto_de_funciones
+package `12_concepto_de_funciones`
 /*
 Desarrollar un programa con dos funciones. La primera solicite el ingreso de un entero y muestre el cuadrado de dicho valor.
 La segunda que solicite la carga de dos valores y muestre el producto de los mismos. Llamar desde la main a ambas funciones.

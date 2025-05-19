@@ -1,4 +1,4 @@
-package concepto_de_funciones
+package `12_concepto_de_funciones`
 
 fun presensentacion() {
     println("programa que permite cargar dos valores por teclado")
