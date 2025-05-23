@@ -3,6 +3,10 @@ package `14_funciones_con_retorno`
 En la función main del programa cargar los lados de dos rectángulos
 y luego mostrar cual de los dos tiene una superficie mayor.
  */
+fun calcularSuperficie(base: Int, altura: Int): Int {
+    return base * altura
+}
+
 fun main() {
     println("Ingrese la base del primer rectángulo:")
     val base1 = readln().toInt()
@@ -14,8 +18,8 @@ fun main() {
     println("Ingrese la altura del segundo rectángulo:")
     val altura2 = readln().toInt()
 
-    val superficie1 = base1 * altura1
-    val superficie2 = base2 * altura2
+    val superficie1 = calcularSuperficie(base1, altura1)
+    val superficie2 = calcularSuperficie(base2, altura2)
 
     println("La superficie del primer rectángulo es: $superficie1")
     println("La superficie del segundo rectángulo es: $superficie2")

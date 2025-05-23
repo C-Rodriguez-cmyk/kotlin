@@ -12,6 +12,6 @@ fun main() {
     val lado1 = readln().toInt()
     print("ingrese el valor del segundo lado del rectangulo:")
     val lado2 = readln().toInt()
-    val superficie = retornosuperficie(base, altura)
+    val superficie = retornosuperficie(lado1, lado2)
     println("la superficie del rectangulo es $superficie")
 }
