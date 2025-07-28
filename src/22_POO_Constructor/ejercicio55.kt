@@ -1,20 +1,21 @@
 package `22_POO_Constructor`
 
-class persona (var nombre: String, edad: Int) {
+class Persona2(var nombre: String, var edad: Int) {
 
-    fun imprmir() {
-        println("nombre: $nombre y tiene $edad años")
+    fun imprimir() {
+        println("Nombre: $nombre y tiene $edad años")
     }
-    fun mayoredad() {
+
+    fun mayorEdad() {
         if (edad >= 18)
-            println("Es mayor de edad $nombre")
+            println("$nombre es mayor de edad")
         else
-            println("No es mayor de edad $nombre")
+            println("$nombre no es mayor de edad")
     }
 }
 
 fun main() {
-    val persona1 = persona("juan", 12)
-    persona1.imprmir()
-    persona1.mayoredad()
+    val persona1 = Persona2("Juan", 12)
+    persona1.imprimir()
+    persona1.mayorEdad()
 }
