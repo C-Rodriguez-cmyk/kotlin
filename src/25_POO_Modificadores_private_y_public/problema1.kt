@@ -55,5 +55,12 @@ class CuentaBancaria {
     }
 }
 
+fun main() {
+    val cuentaBancaria1 = CuentaBancaria()
+    cuentaBancaria1.depositar(8000)
+    cuentaBancaria1.retirar(9000)
+    cuentaBancaria1.consultarSaldo()
+}
+
 
 

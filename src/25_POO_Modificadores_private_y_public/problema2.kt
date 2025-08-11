@@ -36,35 +36,35 @@ Retorna true si está dentro del rango permitido (-50 a 150), false en caso cont
 
 class SensorTemperatura {
     private var temperatura: Double = 0.0
+
     fun configurarTemperatura(valor: Double) {
         if (validarRango(valor)) {
             temperatura = valor
         } else {
-            println("Temperatura fuera del rango permitido (-50 a 150 °C).")
+            println("Error: Temperatura fuera del rango permitido (-50 a 150 °C).")
         }
     }
+
     fun aumentar(delta: Double) {
         val nuevaTemperatura = temperatura + delta
         if (validarRango(nuevaTemperatura)) {
             temperatura = nuevaTemperatura
         } else {
-            println("Aumento excede el rango permitido (-50 a 150 °C).")
+            println("Error: Aumento excede el rango permitido (-50 a 150 °C).")
         }
     }
-
     fun disminuir(delta: Double) {
         val nuevaTemperatura = temperatura - delta
         if (validarRango(nuevaTemperatura)) {
             temperatura = nuevaTemperatura
         } else {
-            println("se disminuyo mas del rango permitido (-50 a 150 °C).")
+            println("Error: Disminución excede el rango permitido (-50 a 150 °C).")
         }
     }
 
     fun mostrar() {
-        println("Temperatura actual:$temperatura)
+        println("Temperatura actual: $temperatura")
     }
-
     private fun validarRango(valor: Double): Boolean {
         return valor in -50.0..150.0
     }
