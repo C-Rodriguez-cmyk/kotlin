@@ -41,7 +41,7 @@ class SensorTemperatura {
         if (validarRango(valor)) {
             temperatura = valor
         } else {
-            println("Error: Temperatura fuera del rango permitido (-50 a 150 °C).")
+            println("fuera del rango permitido (-50 a 150 °C).")
         }
     }
 
@@ -50,7 +50,7 @@ class SensorTemperatura {
         if (validarRango(nuevaTemperatura)) {
             temperatura = nuevaTemperatura
         } else {
-            println("Error: Aumento excede el rango permitido (-50 a 150 °C).")
+            println("excede el rango permitido (-50 a 150 °C).")
         }
     }
     fun disminuir(delta: Double) {
@@ -58,7 +58,7 @@ class SensorTemperatura {
         if (validarRango(nuevaTemperatura)) {
             temperatura = nuevaTemperatura
         } else {
-            println("Error: Disminución excede el rango permitido (-50 a 150 °C).")
+            println("Disminución excede el rango permitido (-50 a 150 °C).")
         }
     }
 
