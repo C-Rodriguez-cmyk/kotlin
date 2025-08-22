@@ -1,5 +1,7 @@
 package `21_POO_Conceptos`
 
+import `26_POO_Metodos_set_y_get`.Jardin
+
 class persona {
     var nombre: String = ""
     var edad: Int = 0
