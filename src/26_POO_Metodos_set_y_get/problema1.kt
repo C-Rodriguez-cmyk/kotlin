@@ -72,7 +72,7 @@ class Jardin(largo: Int, ancho: Int, tipoZacate: Int) {
     val area: Int
         get() = largo * ancho
 
-    val nombreZacate: String
+    val Zacate: String
         get() = when (tipoZacate) {
             1 -> "CRIOLLO"
             2 -> "AMERICANO"
@@ -96,7 +96,7 @@ class Jardin(largo: Int, ancho: Int, tipoZacate: Int) {
     fun imprimirDetalle() {
         println("Largo:$largo metros, Ancho:$ancho metros")
         println("Área:$area metros cuadrados")
-        println("Tipo de zacate:$nombreZacate")
+        println("Tipo de zacate:$Zacate")
         println("Costo mano de obra:${ManoObra()}")
         println("Costo del zacate:${costoZacate()}")
         println("Subtotal:${subtotal()}")
@@ -110,8 +110,4 @@ fun main() {
     jardin1.imprimirDetalle()
     val jardin2 = Jardin(8, 12, 2)
     jardin2.imprimirDetalle()
-    val jardin3 = Jardin(15, -3, 3)
-    jardin3.imprimirDetalle()
-    val jardin4 = Jardin(-7, 20, 5)
-    jardin4.imprimirDetalle()
 }
