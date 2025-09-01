@@ -36,38 +36,28 @@ fun main() {
     )
 
     val copiaAntesVenta = mutableListOf<Butaca>()
-    for (b in butacas) {
-
-        copiaAntesVenta.add(Butaca(b.numero, b.ocupada))
+    for (butaca in butacas) {
+        copiaAntesVenta.add(Butaca(butaca.numero, butaca.ocupada))
     }
 
     var vendida1 = Random.nextInt(1, 6)
     var vendida2 = Random.nextInt(1, 6)
-
     while (vendida2 == vendida1) {
         vendida2 = Random.nextInt(1, 6)
     }
 
-    for (butaca in butacas) {
-        if (butaca.numero in listOf(vendida1, vendida2)) {
-            butaca.ocupada = true
+    for (butaca2 in butacas) {
+        if (butaca2.numero in listOf(vendida1, vendida2)) {
+            butaca2.ocupada = true
         }
     }
-
-    println("Lista:")
+    println("Lista actual:")
     println(butacas)
 
-    println("Lista:")
-    for ((numero, ocupada) in butacas) {
-        val estado =
-            if (ocupada) "ocupada"
-            else "libre"
-        println("Butaca $numero → $estado")
-    }
+    println("Lista antes de la venta:")
+    println(copiaAntesVenta)
 
     println("Comparación de listas:")
-
-    println("Contenido igual ${butacas == copiaAntesVenta}")
-
-    println("Misma referencia ${butacas === copiaAntesVenta}")
+    println("Contenido igual: ${butacas == copiaAntesVenta}")
+    println("Misma referencia: ${butacas === copiaAntesVenta}")
 }
