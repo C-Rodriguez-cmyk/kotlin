@@ -19,22 +19,55 @@ Hacer una copia de la lista antes de vender y comparar ambas listas con == para 
  Sobreescribir toString() para que devuelva “Butaca #X” seguido de “(libre)” o “(ocupada)”.
  */
 
-data class Butaca2(val numero: Int, var ocupada: Boolean) {
+data class Butaca(var numero: Int, var ocupada: Boolean) {
     override fun toString(): String {
-        return "Butaca #$numero
+        val estado = if (ocupada) "(ocupada)" else "(libre)"
+        return "Butaca $numero $estado"
     }
 }
+
 fun main() {
-    val butaca1 = Butaca2(1, false)
-    val butaca2 = Butaca2(2, false)
-    val butaca3 = Butaca2(3, false)
-    val butaca4 = Butaca2(4, false)
-    val butaca5 = Butaca2(5, false)
+    val butacas = mutableListOf(
+        Butaca(1, false),
+        Butaca(2, false),
+        Butaca(3, false),
+        Butaca(4, false),
+        Butaca(5, false)
+    )
 
-    val vendidas = mutableSetOf<Int>()
-    while (vendidas.size < 2) {
-        val numeroAleatorio = Random.nextInt(1, 6)
-        vendidas.add(numeroAleatorio)
+    val copiaAntesVenta = mutableListOf<Butaca>()
+    for (b in butacas) {
+
+        copiaAntesVenta.add(Butaca(b.numero, b.ocupada))
     }
-}
 
+    var vendida1 = Random.nextInt(1, 6)
+    var vendida2 = Random.nextInt(1, 6)
+
+    while (vendida2 == vendida1) {
+        vendida2 = Random.nextInt(1, 6)
+    }
+
+    for (butaca in butacas) {
+        if (butaca.numero in listOf(vendida1, vendida2)) {
+            butaca.ocupada = true
+        }
+    }
+
+    println("Lista:")
+    println(butacas)
+
+    println("Lista:")
+    for ((numero, ocupada) in butacas) {
+        val estado =
+            if (ocupada) "ocupada"
+            else "libre"
+        println("Butaca $numero → $estado")
+    }
+
+    println("Comparación de listas:")
+
+    println("Contenido igual ${butacas == copiaAntesVenta}")
+
+    println("Misma referencia ${butacas === copiaAntesVenta}")
+}
